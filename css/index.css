@@ -50,7 +50,11 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	padding: 50px;
+	padding-bottom: 180px;
 }
 
 html, body {
@@ -73,13 +77,15 @@ section{
 	color: #C0C0C0;
 	text-align: center;
 	padding-right: 30px;
+	
 	text-decoration: none;
 }
-
-
-.nav .logo{
-	float: right;
+.nav{ 
+	display: flex;
+    justify-content: space-between;
+	/* background-color: green; */
 }
+
 
 .innovation{
 	text-align: center;
@@ -167,4 +173,93 @@ footer{
 	text-align: center;
 	padding-top: 30px;
 }
+
+/*Media query for size 800;*/
+@media (max-width: 800px){
+	.nav{
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		width: 100%;
+	}
+	.links{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+}
+
+/*Media query for tablet size 800;*/
+@media (max-width: 800px){
+	.nav{
+		display: flex;
+		flex-direction: column-reverse;
+		align-content: center;
+		width: 100%;
+	}
+	.logo{
+		padding-bottom: 30px;
+	}
+	.image{
+		display:none;
+	}
+	
+}
+
+
+/* Media query here */
+/*Media query for size 500;*/
+@media (max-width: 500px){
+	.nav{
+		display:flex;
+        flex-direction:column-reverse;
+		align-items:center;
+		line-height: 1.6;
+		padding-left:20px;
+		padding-right:20px;
+		
+	}
+
+	.logo{
+		width: 90%;
+		padding:20px;
+	}
+	.links {
+		border-top: 1px grey solid;
+
+		display:flex;
+        flex-direction:column;
+		align-items:center;
+		width: 100%;
+		
+
+	}
+	.links a{
+		border-bottom: 1px grey solid;
+		width: 100%;
+		padding:20px;
+		font-size:20px;
+	}
+	
+	/* hide image */
+	.image{
+		display: none;
+	}
+	.text1{
+		display: flex;
+		flex-direction: column;
+		width:100%;
+		padding-top: 30px;
+	}
+	.text2{
+		display: flex;
+		flex-direction: column;
+		width:100%;
+		padding-top: 20px;
+	}
+	
+}
+
 
